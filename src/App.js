@@ -1,7 +1,7 @@
 
 import React, { useReducer, useEffect, useState } from "react"; 
 
-function reducer(state, action) {
+function reducerfunc(state, action) {
   switch (action.type) {
       case 'INCREASE':
       return { value: state.value + 1 };
@@ -13,7 +13,7 @@ function reducer(state, action) {
 }
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, { value: 0 });
+  const [state, dispatch] = useReducer(reducerfunc, { value: 0 });
 
   return (
      <div className="App">
